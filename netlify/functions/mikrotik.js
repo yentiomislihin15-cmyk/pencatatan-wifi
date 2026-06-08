@@ -13,7 +13,7 @@ exports.handler = async function(event) {
     const id = clean(params.id || '');
     const status = clean(params.status || '');
     const message = clean(params.message || params.msg || '');
-    const data = clean(params.data || '');
+    const data = cleanData(params.data || '');
 
     if (key !== allowedKey) {
       return plain('ERROR|KEY_SALAH');
@@ -75,6 +75,12 @@ function getParams(event) {
 function clean(value) {
   return String(value || '')
     .replace(/[|\r\n]/g, ' ')
+    .trim();
+}
+
+function cleanData(value) {
+  return String(value || '')
+    .replace(/[\r\n]/g, ' ')
     .trim();
 }
 
