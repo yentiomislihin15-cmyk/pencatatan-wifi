@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #111827;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.login-card {
+  max-width: 420px;
+  margin: 55px auto;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.brand-icon {
+  font-size: 48px;
+}
+
+.brand h1,
+.topbar h2,
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.brand p,
+.topbar p,
+.hint,
+.menu-note {
+  margin: 0;
+  color: #6b7280;
+}
+
+.menu-note {
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn.danger {
+  background: #ef4444;
+  color: white;
+}
+
+.topbar,
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.submenu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.menu-card {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 16px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-2px);
+  border-color: #2563eb;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+}
+
+.menu-icon {
+  display: block;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.menu-card strong {
+  display: block;
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.menu-card small {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.placeholder-box {
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  padding: 18px;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.form-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.pelanggan-baru-form {
+  max-width: 520px;
+}
+
+.pelanggan-baru-form .btn {
+  margin-top: 6px;
+}
+
+.msg {
+  min-height: 22px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.msg.info { color: #2563eb; }
+.msg.success { color: #16a34a; }
+.msg.error { color: #dc2626; }
+
+.hint {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .menu-grid,
+  .submenu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

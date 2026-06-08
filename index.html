@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pencatatan WiFi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section id="loginPage" class="card login-card">
+      <div class="brand">
+        <div class="brand-icon">📶</div>
+        <h1>Pencatatan WiFi</h1>
+        <p>Login untuk masuk ke aplikasi</p>
+      </div>
+
+      <form id="loginForm" class="form">
+        <label>Username</label>
+        <input id="loginUsername" type="text" placeholder="Masukkan username" autocomplete="username" required />
+
+        <label>Password</label>
+        <input id="loginPassword" type="password" placeholder="Masukkan password" autocomplete="current-password" required />
+
+        <button type="submit" class="btn primary">Login</button>
+      </form>
+
+      <p class="hint">Akun awal: <b>admin</b> / <b>admin123</b></p>
+      <div id="loginMsg" class="msg"></div>
+    </section>
+
+    <section id="dashboardPage" class="hidden">
+      <header class="topbar">
+        <div>
+          <h2>Pencatatan Pelanggan WiFi</h2>
+          <p id="userInfo">-</p>
+        </div>
+        <button id="logoutBtn" class="btn danger">Logout</button>
+      </header>
+
+      <section class="card dashboard-menu-card">
+        <h3>Menu Utama</h3>
+        <p class="menu-note">Silakan pilih menu.</p>
+
+        <div class="menu-grid">
+          <button class="menu-card" type="button" onclick="openMenu('pelanggan')">
+            <span class="menu-icon">👥</span>
+            <strong>Pelanggan</strong>
+            <small>Data pelanggan WiFi</small>
+          </button>
+
+          <button class="menu-card" type="button" onclick="openMenu('perpanjang')">
+            <span class="menu-icon">🔁</span>
+            <strong>Perpanjang Paket</strong>
+            <small>Catatan perpanjangan</small>
+          </button>
+
+          <button class="menu-card" type="button" onclick="openMenu('laporan')">
+            <span class="menu-icon">📊</span>
+            <strong>Laporan</strong>
+            <small>Rekap data WiFi</small>
+          </button>
+        </div>
+      </section>
+
+      <section id="contentCard" class="card hidden">
+        <div class="section-head">
+          <h3 id="contentTitle">Menu</h3>
+          <button class="btn secondary" type="button" onclick="backToMenu()">Kembali</button>
+        </div>
+        <div id="contentBody" class="placeholder-box">Isi menu nanti disusun di sini.</div>
+      </section>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
