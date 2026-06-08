@@ -101,9 +101,7 @@ function getParams(event) {
       const key = decodeURIComponent(rawKey.replace(/\+/g, ' '));
       const value = decodeURIComponent(rawValue.replace(/\+/g, ' '));
 
-      if (key) {
-        result[key] = value;
-      }
+      if (key) result[key] = value;
     });
   }
 
