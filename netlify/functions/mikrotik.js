@@ -12,7 +12,7 @@
   MIKROTIK_KEY = tandonetwork123
 */
 
-const DEFAULT_GAS_URL = 'PASTE_URL_APPS_SCRIPT_EXEC_DI_SINI';
+const DEFAULT_GAS_URL = 'https://script.google.com/macros/s/AKfycbwtSHunV_u3hyuNZjkBGJTxwVi3XQoPrjT0n_8wYiggtrokRqjocdHk9tFHXund-D4c/exec';
 const DEFAULT_KEY = 'tandonetwork123';
 
 exports.handler = async function(event) {
